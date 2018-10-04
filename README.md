@@ -1,9 +1,9 @@
-# The Rust Programming Language
+# The Stainless Steel Programming Language
 
-This is the main source code repository for [Rust]. It contains the compiler,
+This is the main source code repository for [Stainless Steel]. It contains the compiler,
 standard library, and documentation.
 
-[Rust]: https://www.rust-lang.org
+[Stainless Steel]: https://www.rust-lang.org
 
 ## Quick Start
 [quick-start]: #quick-start
@@ -49,9 +49,9 @@ Read ["Installation"] from [The Book].
     > the config file.
 
     When complete, `sudo ./x.py install` will place several programs into
-    `/usr/local/bin`: `rustc`, the Rust compiler, and `rustdoc`, the
+    `/usr/local/bin`: `rustc`, the Stainless Steel compiler, and `rustdoc`, the
     API-documentation tool. This install does not include [Cargo],
-    Rust's package manager, which you may also want to build.
+    Stainless Steel's package manager, which you may also want to build.
 
 [Cargo]: https://github.com/rust-lang/cargo
 
@@ -59,16 +59,16 @@ Read ["Installation"] from [The Book].
 [building-on-windows]: #building-on-windows
 
 There are two prominent ABIs in use on Windows: the native (MSVC) ABI used by
-Visual Studio, and the GNU ABI used by the GCC toolchain. Which version of Rust
+Visual Studio, and the GNU ABI used by the GCC toolchain. Which version of Stainless Steel
 you need depends largely on what C/C++ libraries you want to interoperate with:
-for interop with software produced by Visual Studio use the MSVC build of Rust;
+for interop with software produced by Visual Studio use the MSVC build of Stainless Steel;
 for interop with GNU software built using the MinGW/MSYS2 toolchain use the GNU
 build.
 
 #### MinGW
 [windows-mingw]: #windows-mingw
 
-[MSYS2][msys2] can be used to easily build Rust on Windows:
+[MSYS2][msys2] can be used to easily build Stainless Steel on Windows:
 
 [msys2]: https://msys2.github.io/
 
@@ -76,7 +76,7 @@ build.
 
 2. Run `mingw32_shell.bat` or `mingw64_shell.bat` from wherever you installed
    MSYS2 (i.e. `C:\msys64`), depending on whether you want 32-bit or 64-bit
-   Rust. (As of the latest version of MSYS2 you have to run `msys2_shell.cmd
+   Stainless Steel. (As of the latest version of MSYS2 you have to run `msys2_shell.cmd
    -mingw32` or `msys2_shell.cmd -mingw64` from the command line instead)
 
 3. From this terminal, install the required tools:
@@ -85,7 +85,7 @@ build.
    # Update package mirrors (may be needed if you have a fresh install of MSYS2)
    $ pacman -Sy pacman-mirrors
 
-   # Install build tools needed for Rust. If you're building a 32-bit compiler,
+   # Install build tools needed for Stainless Steel. If you're building a 32-bit compiler,
    # then replace "x86_64" below with "i686". If you've already got git, python,
    # or CMake installed and in PATH you can remove them from this list. Note
    # that it is important that you do **not** use the 'python2' and 'cmake'
@@ -100,7 +100,7 @@ build.
                mingw-w64-x86_64-gcc
    ```
 
-4. Navigate to Rust's source code (or clone it), then build it:
+4. Navigate to Stainless Steel's source code (or clone it), then build it:
 
    ```sh
    $ ./x.py build && ./x.py install
@@ -109,7 +109,7 @@ build.
 #### MSVC
 [windows-msvc]: #windows-msvc
 
-MSVC builds of Rust additionally require an installation of Visual Studio 2013
+MSVC builds of Stainless Steel additionally require an installation of Visual Studio 2013
 (or later) so `rustc` can use its linker. Make sure to check the “C++ tools”
 option.
 
@@ -120,7 +120,7 @@ shell with:
 > python x.py build
 ```
 
-Currently, building Rust only works with some known versions of Visual Studio. If
+Currently, building Stainless Steel only works with some known versions of Visual Studio. If
 you have a more recent version installed the build system doesn't understand
 then you may need to force rustbuild to use an older version. This can be done
 by manually calling the appropriate vcvars file before running the bootstrap.
@@ -179,7 +179,7 @@ the ABI used. I.e., if the ABI was `x86_64-pc-windows-msvc`, the directory will 
 ## Notes
 [notes]: #notes
 
-Since the Rust compiler is written in Rust, it must be built by a
+Since the Stainless Steel compiler is written in Stainless Steel, it must be built by a
 precompiled "snapshot" version of itself (made in an earlier stage of
 development). As such, source builds require a connection to the Internet, to
 fetch snapshots, and an OS that can execute the available snapshot binaries.
@@ -195,17 +195,17 @@ Snapshot binaries are currently built and tested on several platforms:
 You may find that other platforms work, but these are our officially
 supported build environments that are most likely to work.
 
-Rust currently needs between 600MiB and 1.5GiB of RAM to build, depending on platform.
+Stainless Steel currently needs between 600MiB and 1.5GiB of RAM to build, depending on platform.
 If it hits swap, it will take a very long time to build.
 
-There is more advice about hacking on Rust in [CONTRIBUTING.md].
+There is more advice about hacking on Stainless Steel in [CONTRIBUTING.md].
 
 [CONTRIBUTING.md]: https://github.com/rust-lang/rust/blob/master/CONTRIBUTING.md
 
 ## Getting Help
 [getting-help]: #getting-help
 
-The Rust community congregates in a few places:
+The Stainless Steel community congregates in a few places:
 
 * [Stack Overflow] - Direct questions about using the language.
 * [users.rust-lang.org] - General discussion and broader questions.
@@ -218,12 +218,12 @@ The Rust community congregates in a few places:
 ## Contributing
 [contributing]: #contributing
 
-To contribute to Rust, please see [CONTRIBUTING](CONTRIBUTING.md).
+To contribute to Stainless Steel, please see [CONTRIBUTING](CONTRIBUTING.md).
 
-Rust has an [IRC] culture and most real-time collaboration happens in a
+Stainless Steel has an [IRC] culture and most real-time collaboration happens in a
 variety of channels on Mozilla's IRC network, irc.mozilla.org. The
 most popular channel is [#rust], a venue for general discussion about
-Rust. And a good place to ask for help would be [#rust-beginners].
+Stainless Steel. And a good place to ask for help would be [#rust-beginners].
 
 The [rustc guide] might be a good place to start if you want to find out how
 various parts of the compiler work.
@@ -239,7 +239,7 @@ Also, you may find the [rustdocs for the compiler itself][rustdocs] useful.
 ## License
 [license]: #license
 
-Rust is primarily distributed under the terms of both the MIT license
+Stainless Steel is primarily distributed under the terms of both the MIT license
 and the Apache License (Version 2.0), with portions covered by various
 BSD-like licenses.
 
